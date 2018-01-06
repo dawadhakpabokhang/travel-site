@@ -1,0 +1,16 @@
+$mainColor: #2f5572;
+
+body{
+  color: $mainColor;
+  width: 50%;
+  font-size: 1em;
+  columns: 300px 2;
+}
+
+.box{
+
+  h1{
+    font-family: 'Arial';
+  }
+
+}

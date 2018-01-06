@@ -1,0 +1,11 @@
+body{
+  color: #2f5572;
+  width: 50%;
+  font-size: 1em;
+  -webkit-columns: 300px 2;
+          columns: 300px 2;
+}
+
+.box h1{
+    font-family: 'Arial';
+  }
