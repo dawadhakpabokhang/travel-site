@@ -5,7 +5,7 @@
   /* the ampersand refers to the block (.large-hero) */
   &__text-content{
     position: absolute;
-
+    
     /* vertically align this div */
     top: 50%;
     transform: translateY(-50%);

@@ -471,7 +471,7 @@ img{
 
 .large-hero__text-content{
     position: absolute;
-
+    
     /* vertically align this div */
     top: 50%;
     -webkit-transform: translateY(-50%);
