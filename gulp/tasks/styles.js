@@ -4,6 +4,7 @@ var autoprefixer = require('autoprefixer');
 var cssVars = require('postcss-simple-vars');
 var nestedCss = require('postcss-nested');
 var cssImport = require('postcss-import');
+var mixins = require('postcss-mixins');
 
 ////////// EVERYTHING IN GULP REVOLVES AROUND TASKS //////////
 
@@ -18,7 +19,7 @@ gulp.task('styles', function(){
 
     // pass in the post css automation tools you want run as an array into the postcss.([]) method as an array
     // here you passed in the css Import, css variable, nested css and auto prefixer packages
-    .pipe(postcss([cssImport, cssVars, autoprefixer, nestedCss]))
+    .pipe(postcss([cssImport, mixins, cssVars, autoprefixer, nestedCss]))
 
     ////////////////////////////////////////////////////// GULP ERROR HANDELING //////////////////////////////////////////////////////
 
@@ -28,7 +29,7 @@ gulp.task('styles', function(){
       this.emit('end');
     })
 
-    ////////////////////////////////////////////////////// GULP ERROR HANDELING ////////////////////////////////////////////////////// 
+    ////////////////////////////////////////////////////// GULP ERROR HANDELING //////////////////////////////////////////////////////
 
     // gulp.dest points to where we want the new css file to be made
     .pipe(gulp.dest('./app/temp/styles'));

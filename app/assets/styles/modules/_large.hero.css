@@ -5,7 +5,7 @@
   /* the ampersand refers to the block (.large-hero) */
   &__text-content{
     position: absolute;
-    
+
     /* vertically align this div */
     top: 50%;
     transform: translateY(-50%);
@@ -20,15 +20,33 @@
   &__title{
     font-weight: 300;
     color: $mainBlue;
-    font-size: 4.8rem;
     margin: 0;
+    font-size: 1.1rem;
+
+    /*use @mixin name to choose media query*/
+    @mixin atSmall{
+      font-size: 2rem;
+    }
+
+    @mixin atMedium{
+      font-size: 3.2rem;
+    }
+
+    @mixin atLarge{
+      font-size: 4.8rem;
+    }
   }
 
   &__subtitle{
     font-weight: 300;
     color: $mainBlue;
-    font-size: 2.9rem;
+    font-size: 1.1rem;
     margin: 0;
+
+    /*use @mixin name to choose media query*/
+    @mixin atSmall{
+      font-size: 2.9rem;
+    }
   }
 
   &__description{

@@ -35,7 +35,7 @@ gulp.task('watch', function(){
 });
 
 
-// the cssInject task refreshes the browser whenver a css file has been updated
+// the cssInject task refreshes the browser whenever a css file has been updated
 // the cssInject task does not begin until the 'styles' task runs and completes (its a dependency)
 gulp.task('cssInject', ['styles'], function(){
   return gulp.src('./app/temp/styles/styles.css')

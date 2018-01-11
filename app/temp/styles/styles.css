@@ -460,6 +460,12 @@ img{
   height: auto;
 }
 
+/* Use @define-mixin followed by what you want to name the mixin*/
+
+/* medium sized screens*/
+
+/* large sized screens*/
+
 /* .large-hero is the base block rule*/
 
 .large-hero{
@@ -471,7 +477,7 @@ img{
 
 .large-hero__text-content{
     position: absolute;
-    
+
     /* vertically align this div */
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -488,16 +494,52 @@ img{
 .large-hero__title{
     font-weight: 300;
     color: #2f5572;
-    font-size: 4.8rem;
     margin: 0;
+    font-size: 1.1rem;
   }
+
+/* then include the media query you want the mixin to contain*/
+
+@media (min-width: 530px){
+
+.large-hero__title{
+
+    /* the @mixin-content only refers to what styles you want for*/
+      font-size: 2rem
+  }}
+
+/*use @mixin name to choose media query*/
+
+@media (min-width: 800px){
+
+.large-hero__title{
+      font-size: 3.2rem
+  }}
+
+@media (min-width: 1200px){
+
+.large-hero__title{
+      font-size: 4.8rem
+  }}
 
 .large-hero__subtitle{
     font-weight: 300;
     color: #2f5572;
-    font-size: 2.9rem;
+    font-size: 1.1rem;
     margin: 0;
+
+    /*use @mixin name to choose media query*/
   }
+
+/* then include the media query you want the mixin to contain*/
+
+@media (min-width: 530px){
+
+.large-hero__subtitle{
+
+    /* the @mixin-content only refers to what styles you want for*/
+      font-size: 2.9rem
+  }}
 
 .large-hero__description{
     color: white;

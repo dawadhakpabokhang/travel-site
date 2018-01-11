@@ -1,0 +1,24 @@
+/* Use @define-mixin followed by what you want to name the mixin*/
+@define-mixin atSmall {
+
+  /* then include the media query you want the mixin to contain*/
+  @media (min-width: 530px){
+
+    /* the @mixin-content only refers to what styles you want for*/
+    @mixin-content
+  }
+}
+
+/* medium sized screens*/
+@define-mixin atMedium{
+  @media (min-width: 800px){
+    @mixin-content
+  }
+}
+
+/* large sized screens*/
+@define-mixin atLarge{
+  @media (min-width: 1200px){
+    @mixin-content
+  }
+}
