@@ -1,0 +1,44 @@
+/* .large-hero is the base block rule*/
+.large-hero{
+  position: relative;
+
+  /* the ampersand refers to the block (.large-hero) */
+  &__text-content{
+    position: absolute;
+
+    /* vertically align this div */
+    top: 50%;
+    transform: translateY(-50%);
+
+    /* vertically align this div */
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* anything starting with an ampersand is the element within the block code*/
+  &__title{
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 4.8rem;
+    margin: 0;
+  }
+
+  &__subtitle{
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 2.9rem;
+    margin: 0;
+  }
+
+  &__description{
+    color: white;
+    font-size: 1.875rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
