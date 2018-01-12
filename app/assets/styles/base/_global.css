@@ -7,3 +7,13 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+
+*{
+  /* padding will still be applied but it will not effect the calculated width value */
+  box-sizing: border-box;
+}
+
+a {
+  color: $mainOrange;
+}

@@ -1,0 +1,45 @@
+.row{
+
+  @mixin clearFix;
+
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  /* this selects all children with a tag of div within the parent element */
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
+  &__b-margin-until-medium{
+    margin-bottom: 1rem;
+  }
+
+  @mixin atMedium{
+
+    &__b-margin-until-medium{
+      margin-bottom: 0;
+    }
+
+    &__medium-4{
+      float:left;
+      /* to calculate the width, divide 100 by the total number of rows (12) and then multiply it with the number of rows you want to assign it*/
+      /* [ (100/12) * 4 ] */
+      width: 33.33%;
+    }
+
+    &__medium-4--larger{
+      width: 37%;
+    }
+
+    &__medium-8{
+      float: left;
+      width: 66.66%;
+    }
+
+    &__medium-8--smaller{
+      width: 63%;
+    }
+  }
+
+}

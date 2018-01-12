@@ -4,7 +4,7 @@
   /* then include the media query you want the mixin to contain*/
   @media (min-width: 530px){
 
-    /* the @mixin-content only refers to what styles you want for*/
+    /* the @mixin-content only refers to what styles you will input when referring to the mixin */
     @mixin-content
   }
 }
@@ -20,5 +20,15 @@
 @define-mixin atLarge{
   @media (min-width: 1200px){
     @mixin-content
+  }
+}
+
+@define-mixin clearFix{
+  /* the &::after selector will add the blank space after all of the content in the .row div */
+  /* this will allow the .row div to have height and not allow it to be overlapped */
+  &::after{
+    content: "";
+    clear: both;
+    display: table;
   }
 }
