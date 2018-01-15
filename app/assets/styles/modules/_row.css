@@ -6,6 +6,10 @@
     margin-right: -65px;
   }
 
+  &--small{
+    margin-right: -45px;
+  }
+
   &--gutters-large{
     margin-right: -100px;
   }
@@ -15,12 +19,20 @@
     padding-right: 65px;
   }
 
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
+
   &--gutters-large > div {
     padding-right: 100px;
   }
 
   &__b-margin-until-medium{
     margin-bottom: 1rem;
+  }
+
+  &--t-padding{
+    padding-top: 80px;
   }
 
   @mixin atMedium{
@@ -55,4 +67,58 @@
     }
   }
 
+  @mixin atLarge{
+
+    &__b-margin-until-large{
+      margin-bottom: 0;
+    }
+
+    &__large-4{
+      float:left;
+      /* to calculate the width, divide 100 by the total number of rows (12) and then multiply it with the number of rows you want to assign it*/
+      /* [ (100/12) * 4 ] */
+      width: 33.33%;
+    }
+
+    &__large-6{
+      float: left;
+      width: 50%;
+    }
+
+    &__large-4--larger{
+      width: 37%;
+    }
+
+    &__large-8{
+      float: left;
+      width: 66.66%;
+    }
+
+    &__large-8--smaller{
+      width: 63%;
+    }
+  }
+
+  /* Begin equal height rule*/
+  &--equal-height-at-medium{
+    @mixin atMedium{
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
+
+  &--equal-height-at-large{
+    @mixin atLarge{
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
 }
